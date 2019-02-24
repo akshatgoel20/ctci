@@ -1,4 +1,4 @@
-package com.starksky.ctci;
+package com.starksky.ctci.ArraysAndStrings;
 
 public class isUnique {
     public boolean isUnique(String str){
