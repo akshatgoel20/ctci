@@ -2,6 +2,8 @@ package com.starksky.ctci;
 
 import com.starksky.ctci.LinkedList.LinkedList;
 import com.starksky.ctci.LinkedList.RemoveDups;
+import com.starksky.ctci.LinkedList.ReturnKthToLast;
+import sun.awt.image.ImageWatched;
 
 public class Main {
 
@@ -39,9 +41,15 @@ public class Main {
         System.out.print("Input: ");
         list.printList();
         System.out.println();
-        RemoveDups removeDups = new RemoveDups();
+
+       /* RemoveDups removeDups = new RemoveDups();
         removeDups.deleteDups(LinkedList.head);
         System.out.print("Output: ");
-        list.printList();
+        list.printList();*/
+
+        ReturnKthToLast returnKthToLast = new ReturnKthToLast();
+        LinkedList.Node rK = returnKthToLast.returnKthToLast(LinkedList.head, 2);
+        System.out.println(rK.data);
+
     }
 }
