@@ -1,8 +1,6 @@
 package com.starksky.ctci;
 
-import com.starksky.ctci.LinkedList.LinkedList;
-import com.starksky.ctci.LinkedList.RemoveDups;
-import com.starksky.ctci.LinkedList.ReturnKthToLast;
+import com.starksky.ctci.LinkedList.*;
 import sun.awt.image.ImageWatched;
 
 public class Main {
@@ -27,10 +25,10 @@ public class Main {
         LinkedList.Node second = new LinkedList.Node(2);
         LinkedList.Node third = new LinkedList.Node(3);
         LinkedList.Node fourth = new LinkedList.Node(4);
-        LinkedList.Node fifth = new LinkedList.Node(2);
-        LinkedList.Node sixth = new LinkedList.Node(2);
-        LinkedList.Node seventh = new LinkedList.Node(3);
-        LinkedList.Node eight = new LinkedList.Node(4);
+        LinkedList.Node fifth = new LinkedList.Node(4);
+        LinkedList.Node sixth = new LinkedList.Node(3);
+        LinkedList.Node seventh = new LinkedList.Node(2);
+        LinkedList.Node eight = new LinkedList.Node(1);
         list.head.next = second;
         second.next = third;
         third.next = fourth;
@@ -38,8 +36,9 @@ public class Main {
         fifth.next = sixth;
         sixth.next = seventh;
         seventh.next = eight;
+        eight.next = null;
         System.out.print("Input: ");
-        list.printList();
+       // list.printList();
         System.out.println();
 
        /* RemoveDups removeDups = new RemoveDups();
@@ -47,9 +46,15 @@ public class Main {
         System.out.print("Output: ");
         list.printList();*/
 
-        ReturnKthToLast returnKthToLast = new ReturnKthToLast();
+       /* ReturnKthToLast returnKthToLast = new ReturnKthToLast();
         LinkedList.Node rK = returnKthToLast.returnKthToLast(LinkedList.head, 2);
-        System.out.println(rK.data);
+        System.out.println(rK.data);*/
+
+       /* LoopDetection loopDetection = new LoopDetection();
+        loopDetection.loopDetection(LinkedList.head);*/
+
+        Palindrome palindrome = new Palindrome();
+        System.out.println(palindrome.Solution(LinkedList.head));
 
     }
 }
