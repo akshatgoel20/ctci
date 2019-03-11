@@ -1,5 +1,7 @@
 package com.starksky.ctci;
 
+import com.starksky.ctci.CtciLibrary.AssortedMethods;
+import com.starksky.ctci.CtciLibrary.LinkedListNode;
 import com.starksky.ctci.LinkedList.*;
 import sun.awt.image.ImageWatched;
 
@@ -38,7 +40,7 @@ public class Main {
         seventh.next = eight;
         eight.next = null;
         System.out.print("Input: ");
-       // list.printList();
+        // list.printList();
         System.out.println();
 
        /* RemoveDups removeDups = new RemoveDups();
@@ -53,8 +55,20 @@ public class Main {
        /* LoopDetection loopDetection = new LoopDetection();
         loopDetection.loopDetection(LinkedList.head);*/
 
-        Palindrome palindrome = new Palindrome();
-        System.out.println(palindrome.Solution(LinkedList.head));
+       /* Palindrome palindrome = new Palindrome();
+        System.out.println(palindrome.Solution(LinkedList.head));*/
+
+        //intersection
+
+        int[] vals = {-1, -2, 0, 1, 2, 3, 4, 5, 6, 7, 8};
+        LinkedListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+
+        int[] vals2 = {6, 7, 8};
+        LinkedListNode list2 = AssortedMethods.createLinkedListFromArray(vals2);
+
+        Intersection intersection = new Intersection();
+        System.out.println(intersection.Solutions(list1, list2));
+
 
     }
 }
